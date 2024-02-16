@@ -1,19 +1,28 @@
-const Employee = require('../lib/');
 
-class Engineer extends Employee {
-  constructor(name, id, email, github) {
-    super(name, id, email);
-    this.github = github;
+class Employee {
+  constructor(name, id, email) {
+
+    this.name = name;
+    this.id = id;
+    this.email = email;
   }
 
-  getGithub() {
-    return this.github;
+  getName() {
+    return this.name;
   }
-  
+
+  getId() {
+    return this.id;
+  }
+
+  getEmail() {
+    return this.email;
+  }
+
 
   getRole() {
-    return 'Engineer';
+    return 'Employee';
   }
 }
 
-module.exports = Engineer;
+module.exports = Employee;
